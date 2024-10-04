@@ -1,5 +1,4 @@
 
-
 import io.javalin.Javalin;
 
 public class JavalinSingleton {
@@ -18,7 +17,7 @@ public class JavalinSingleton {
         app.get("/client-side-err", ctx -> {
         
             //write logic here
-            
+            ctx.status(400).result("Client Side Error");
         });
 
         return app;
